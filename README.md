@@ -1,6 +1,6 @@
 # Phishing Detector Extension
 
-Phishing Detector is a Chrome extension that scans emails in Gmail and Outlook for phishing and scam content using a fine-tuned BERT model. The extension communicates with a Flask backend to classify email content and provide immediate alerts if a phishing attempt is detected.
+Phishing Detector is a Chrome extension that scans emails in Gmail for phishing and scam content using a fine-tuned BERT model. The extension communicates with a Flask backend to classify email content and provide immediate alerts if a phishing attempt is detected.
 
 ## Features
 - Detects phishing emails and provides a visual warning directly within Gmail and Outlook.
