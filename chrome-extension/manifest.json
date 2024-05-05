@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Phishing Detector",
+    "version": "1.0",
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "activeTab",
+        "storage",
+        "http://127.0.0.1:5000/"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://mail.google.com/*", "https://outlook.live.com/*"],
+            "js": ["contentScript.js"]
+        }
+    ],
+    "icons": {
+        "48": "icon.png"
+    },
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'; connect-src 'self' http://127.0.0.1:5000/; frame-src 'self';"
+    }
+}
